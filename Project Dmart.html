@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+     body{
+        overflow-x: hidden;}
+    
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="margin: 5PX; margin-left: 50px;"> <img
+                    src="data:image/png;base64,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"
+                    alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"
+                style="background-color: black;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                <ul class="navbar-nav " style="margin-left: 5%; ">
+                    <li class="nav-item pe-3">
+                        <a class="nav-link" href="ABOUT.html" style="color: black; font-weight: bold;">ABOUT AS</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link" href="Categories.html" style="color: black;font-weight: bold;">CATEGORIES</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link" href="Social outreach.html" style="color: black;font-weight: bold;">SOCIAL OUTREACH</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link" href="#" style="color: black;font-weight: bold;">PARTNER WITH SU</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link" href="#" style="color: black;font-weight: bold;">CAREERS</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link" href="#" style="color: black;font-weight: bold;">FEESBACK</a>
+                    </li>
+                    <li><i class="fa-brands fa-square-facebook fa-2xl  pe-3" style="color: #015af4;"></i></li>
+                    <li><i class="fa-brands fa-linkedin fa-2xl pe-3" style="color: #476ba9;"></i></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="">
+        <p
+            style="background-color:#46BC5B; color: white;  height: 38px; will-change: transform; position: absolute; display:flex; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: opx; margin-inline-end: 0px; margin-top: 0;">
+            <marquee> Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Ullam voluptas vitae mollitia, sit unde quaerat
+                ratione facere optio modi iste tempore a obcaecati veniam culpa magni veritatis! Ab, porro pariaturiste
+                tempore.</marquee>
+        </p>
+    </div>
+    <div>
+        <img src="https://www.dmartindia.com/static/media/home-banner.644eeaa9.jpg" alt="" style="width: 100%;">
+    </div>
+    <!-- QUICK LINKS -->
+    <div class="d-flex flex-wrap justify-content-around ">
+        <a
+            style="font-size: 18PX; text-align: center; border-bottom: 2PX solid; padding-bottom: 2PX; text-transform: uppercase; border-bottom-color: #046d38; margin-top: 20px;">QUICK
+            LINK</a>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img src="https://www.dmartindia.com/static/media/photo-1514792368985-f80e9d482a02.c96767e9.jpg" alt=""
+                    style="width: 55%; margin-left:200px;">
+            </div>
+            <div class="col-md-6 col-sm-12">
+
+                <h2>New Suppliers</h2>
+                <p>Would you like to showcasebyour products to us?</p>
+                <button style=" border-radius: 17PX; background-color: green; color: white;">NEW VENDOR
+                    ONLINE APPOINTMENT</button>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img src="https://www.dmartindia.com/static/media/photo-1534723452862-4c874018d66d.4328707c.jpg" alt=""
+                    style="width: 55%; margin-left:200px; margin-top: 30px; height: 150px;">
+            </div>
+            <div class="col-md-6 col-sm-12">
+
+                <h2>Landlords</h2>
+                <p>Do you have a property to rent / sell?</p>
+                <button style=" border-radius: 17PX; background-color: green; color: white;">REGISTER AS
+                    LANDLORD</button>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img src="https://www.dmartindia.com/static/media/photo-1586281380349-632531db7ed4.d0c6ae2b.jpg" alt=""
+                    style="width: 55%; margin-left:200px; height: 150px; margin-top: 30px;">
+            </div>
+            <div class="col-md-6 col-sm-12">
+
+                <h2>Job Aspirant</h2>
+                <p>interested in joinind us?</p>
+                <button style=" border-radius: 17PX; background-color: green; color: white;">APPLY
+                    NOW</button>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <img src="https://www.dmartindia.com/static/media/photo-1531206715517-5c0ba140b2b8.69577f04.jpg"
+                        alt="" style="width: 55%; margin-left:200px; height: 150px; margin-top: 30px;">
+                </div>
+                <div class="col-md-6 col-sm-12">
+
+                    <h2>Bettr Schools, Brighter Futures!</h2>
+                    <p>Bettr Schools, Brighter Futures!</p>
+                    <button style=" border-radius: 17PX; background-color: green; color: white;">READ
+                        MORE</button>
+                </div>
+
+            </div>
+            <!-- NEW STORES -->
+            <div class="d-flex flex-wrap justify-content-around">
+                <a
+                    style="margin-top: 80px; font-size: 18px;border-bottom: 2PX solid; padding-bottom: 2PX; text-transform: uppercase; border-bottom-color: #046d38;">NEW
+                    STORES</a>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div>
+                        <h3>Palda</h3>
+                        <p>Gurgaon, Haryana</p>
+                        <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iXXGOPpGtATE/v0/-1x-1.jpg" alt=""
+                            style="width: 70%; height: 200px;">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div>
+                        <h3>Wagholi</h3>
+                        <p>Pune, Maharashtra</p>
+                        <img src="https://content.jdmagicbox.com/comp/mumbai/r8/022p1219159400g1y5r8/catalogue/d-mart-new-panvel-navi-mumbai-d-mart-er5qdb1sd7.jpg?clr="
+                            alt="" style="width: 70%; height: 200px;">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div>
+                        <h3>Turagi</h3>
+                        <p>Kakinada, Andhra Pradesh</p>
+                        <img src="https://www.dmartindia.com/static/media/photo-1534723452862-4c874018d66d.4328707c.jpg"
+                            alt="" style="width:70% ; height: 200px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- STORE CATEGORIES -->
+
+        <div style="display: flex;">
+            <a
+                style="margin-top: 80px; margin-left: 50%; font-size: 18px;border-bottom: 2PX solid; padding-bottom: 2PX; text-transform: uppercase; border-bottom-color: #046d38;">STORE
+                CATEGORIES</a>
+        </div>
+        <div class="d-flex flex-wrap justify-content-around pe-5 mb-5"
+            style="width: 80%; align-items: center; margin-left: 150px;">
+
+            <div class="mb-5" style="position: relative;">
+                <img src="https://www.dmartindia.com/static/media/GROCERY%20&%20STAPLES.88be12a7.jpg" alt="">
+                <div class="CATEGORIES">
+
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    GROCERY & STAPLES</H6> </div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="https://www.dmartindia.com/static/media/DAILY%20ESSENTIALS.e203cb84.jpg" alt=""
+                    style="height: 240px; width: 240px;">
+                    <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    DAILY ESSENTIALS</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="https://www.dmartindia.com/static/media/DAIRY%20&%20FROZEN.41fe6246.jpg" alt=""
+                    style="height: 240px; width: 240px;">
+                    <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    DAIRY & FROZEN</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="https://www.dmartindia.com/static/media/DMART%20BRANDS.d0b4c9ca.jpg" alt=""
+                    style="height: 240px; width: 240px;">
+                    <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    DMART BRANDS</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="download.jpeg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    HOME & PERSONAL CARE</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="download (1).jpeg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    BED & BATH</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="download (2).jpeg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    HOME APPLIANCES</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="CROCKERY.df85981a.jpg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    CROCKERY</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="footwear.c6c8abf9.jpg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    FOOTWEAR</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="luggage.4918bf6c.jpg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    LUGGAGE</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="toys.9758d08b.jpeg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    TOYS & GAMES</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="plastics.d88cb67f.jpeg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    PLASTIC CONTAINERS</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="kids-clothing.2a98cc19.jpg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    KID'S APPAREL</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="LADIES GARMENTS.8db50d48.jpg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    WOMEM'S APPAREL</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="apparel-men.309fe2a5.jpg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    MEN'S APPAREL</H6></div>
+            </div>
+            <div class="mb-5" style="position: relative;">
+                <img src="FRUITS & VEGETABLES.ecbcaabc.jpg" alt="" style="height: 240px; width: 240px;">
+                <div class="CATEGORIES">
+                <H6
+                    style="color: #fff;  width: 240px; opacity: 0.5; padding: 8px; position: absolute; font-size: 14px; text-align: center; font-weight: bold; background-color: #374553; border-bottom-left-radius: 9px; border-bottom-right-radius: 8px;">
+                    FRUITS & VEGETABLES</H6></div>
+            </div>
+        </div>
+        <div>
+            <div style=" opacity: 0.5;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117503.16124967404!2d72.40813323544918!3d23.024734585473794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b0b51a03b0b%3A0x9c7b6bc03980af2!2sDMart!5e0!3m2!1sen!2sin!4v1693286759509!5m2!1sen!2sin"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+</body>
+
+</html>
